@@ -4,7 +4,10 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/kerkness/laravel-r2-multipart-upload.svg?style=flat-square)](https://packagist.org/packages/kerkness/laravel-r2-multipart-upload)
 ![GitHub Actions](https://github.com/kerkness/laravel-r2-multipart-upload/actions/workflows/main.yml/badge.svg)
 
-Uses Cloudflare R2 filesystem with support for multipart uploads and a headless uploader like Uppy.js.
+Perform multipart uploads to the Cloudflare R2 filesystem with a headless uploader like Uppy.js.
+
+Inspired by and modeled after https://github.com/TappNetwork/laravel-uppy-s3-multipart-upload
+Thanks to the TappNetwork for their useful package(s)
 
 ## Installation
 

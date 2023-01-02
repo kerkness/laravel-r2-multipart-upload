@@ -3,58 +3,37 @@
 namespace Kerkness\LaravelR2MultipartUpload;
 
 use Illuminate\Support\ServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class LaravelR2MultipartUploadServiceProvider extends ServiceProvider
+class LaravelR2MultipartUploadServiceProvider extends PackageServiceProvider
 {
-    /**
-     * Bootstrap the application services.
-     */
-    public function boot()
+
+    public function configurePackage(Package $package): void
     {
-        /*
-         * Optional methods to load your package assets
-         */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laravel-r2-multipart-upload');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-r2-multipart-upload');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
-
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('laravel-r2-multipart-upload.php'),
-            ], 'config');
-
-            // Publishing the views.
-            /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/laravel-r2-multipart-upload'),
-            ], 'views');*/
-
-            // Publishing assets.
-            /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/laravel-r2-multipart-upload'),
-            ], 'assets');*/
-
-            // Publishing the translation files.
-            /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-r2-multipart-upload'),
-            ], 'lang');*/
-
-            // Registering package commands.
-            // $this->commands([]);
-        }
+        $package->name('laravel-r2-multipart-upload')
+            ->hasConfigFile()
+            ->hasRoute('web');
     }
+
+
+    public function bootingPackage()
+    {
+        //
+    }
+
 
     /**
      * Register the application services.
      */
-    public function register()
-    {
-        // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-r2-multipart-upload');
+    // public function register()
+    // {
+    //     // // Automatically apply the package configuration
+    //     // $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-r2-multipart-upload');
 
-        // Register the main class to use with the facade
-        $this->app->singleton('laravel-r2-multipart-upload', function () {
-            return new LaravelR2MultipartUpload;
-        });
-    }
+    //     // // Register the main class to use with the facade
+    //     // $this->app->singleton('laravel-r2-multipart-upload', function () {
+    //     //     return new LaravelR2MultipartUpload;
+    //     // });
+    // }
 }
