@@ -1,10 +1,10 @@
-# Very short description of the package
+# Laravel Package for supporting multipart uploads to an R2 Filesystem
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kerkness/laravel-r2-multipart-upload.svg?style=flat-square)](https://packagist.org/packages/kerkness/laravel-r2-multipart-upload)
 [![Total Downloads](https://img.shields.io/packagist/dt/kerkness/laravel-r2-multipart-upload.svg?style=flat-square)](https://packagist.org/packages/kerkness/laravel-r2-multipart-upload)
 ![GitHub Actions](https://github.com/kerkness/laravel-r2-multipart-upload/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Uses Cloudflare R2 filesystem with support for multipart uploads and a headless uploader like Uppy.js.
 
 ## Installation
 
